@@ -22,8 +22,7 @@ But if you don't want install it, you can run by using:
 this way it will run and automatically restart when a file changes.
 
 ##### Setting up our JWT secret
-This secret should be a long random string in that will be used to encryt and decrypt our data. To generate one we can use the node library called `crypto`.
-Run node on your terminal by simply using:
+This secret should be a long random string that will be used to encryt and decrypt our data. To generate one we can use the node library called `crypto`.To do this, you can run node on your terminal by using:
 `node`
 You should see something similar to this:
 ```
