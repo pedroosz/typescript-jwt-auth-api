@@ -43,8 +43,8 @@ Copy this string and paste into `TOKEN_SECRET` inside the `.env` *(rename the .e
 
 ##### Setting up Prisma
 In order to init our Prisma Client we can run the following command:
-`npx prisma init --datasource-provider sqlite`
-after it, we need to run a migration in order to create our tables
+`npx prisma init --datasource-provider sqlite`, to generate our prisma client we need to run `npx prisma generate` and
+after it, a migration in order to create our tables
 `npx prisma migrate dev --name init`
 and there you go, now you can crank it up!
 
