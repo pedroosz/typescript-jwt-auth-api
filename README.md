@@ -14,21 +14,17 @@ You can install all dependencies by using `npm install` or `yarn`, you will also
 ##### Setting up tsx
 In order to install [tsx]("https://www.npmjs.com/package/tsx") globally, run: 
 `npm install tsx --global` or `yarn global add tsx`
-
 then after installing  tsx *(and setting up prisma)*  you can simply run:
 `npm run dev` or `yarn dev`
 
 But if you don't want install it, you can run by using: 
 `npx tsx watch ./src/index.ts`
-
 this way it will run and automatically restart when a file changes.
 
 ##### Setting up our JWT secret
 This secret should be a long random string in that will be used to encryt and decrypt our data. To generate one we can use the node library called `crypto`.
-
 Run node on your terminal by simply using:
 `node`
-
 You should see something similar to this:
 ```
 Welcome to Node.js v16.17.1.
@@ -39,23 +35,18 @@ Type ".help" for more information.
 Now insert
 `require('crypto').randomBytes(64).toString('hex')`
 and hit enter.
-
 it should result on something similar to this:
 ```
 > require('crypto').randomBytes(64).toString('hex')
 '461a4ba8e54ba021c25588d547844deeea8efa5ac8482228675fa8d4ba6bff1979d6266666172a28acf3b6eafa3c54826dcbfbbcae958908ceff34872dc8603c'
 ```
-
 Copy this string and paste into `TOKEN_SECRET` inside the `.env` *(rename the .env.example to .env)*.
 
 ##### Setting up Prisma
 In order to init our Prisma Client we can run the following command:
 `npx prisma init --datasource-provider sqlite`
-
 after it, we need to run a migration in order to create our tables
-
 `npx prisma migrate dev --name init`
-
 and there you go, now you can crank it up!
 
 #### Endpoints
@@ -68,7 +59,7 @@ and there you go, now you can crank it up!
 
 ### GET /users/@me (Protected)
 ##### Expected response
->  **(Status code 200)**
+> **(Status code 200)**
 ```json
 {
   "id": 1,
@@ -99,7 +90,7 @@ and there you go, now you can crank it up!
 ```
 
 ##### Expected response
->  **(Status code 200)**
+> **(Status code 200)**
 ```json
 {
     "username": "Dummy",
@@ -109,14 +100,14 @@ and there you go, now you can crank it up!
 ```
 
 ##### Possible responses
->  **(Status code 401)**
+> **(Status code 401)**
 ```json
 {
     "message": "Wrong password."
 }
 ```
 
-> ** (Status code 500)**
+> **(Status code 500)**
 ```json
 {
     "message": "Unable to sign a JWT",
@@ -135,7 +126,7 @@ and there you go, now you can crank it up!
 ```
 
 ##### Expected response
-> ** (Status code 200)**
+> **(Status code 200)**
 ```json
 {
     "username": "Dummy",
@@ -144,7 +135,7 @@ and there you go, now you can crank it up!
 ```
 
 ##### Possible responses
-> ** (Status code 500)**
+> **(Status code 500)**
 ```json
 {
     "message": "Unable to sign a JWT",
