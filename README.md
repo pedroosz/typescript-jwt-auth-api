@@ -69,7 +69,7 @@ and there you go, now you can crank it up!
 ### GET /users/@me (Protected)
 ##### Expected response
 >  **(Status code 200)**
->```json
+```json
 {
   "id": 1,
   "email": "dummy@example.com",
@@ -81,7 +81,7 @@ and there you go, now you can crank it up!
 ### GET /users/:id (Protected)
 ##### Expected response
 > **(Status code 200)**
-> ```json
+```json
 {
   "id": 1,
   "created_at": "2023-02-02T15:40:06.891Z",
@@ -91,7 +91,7 @@ and there you go, now you can crank it up!
 
 ### POST - /auth/login
 ##### Expected body
-> ```json
+```json
 {
     "email": "dummy@example.com",
     "password": "youshallnotpass"
@@ -100,7 +100,7 @@ and there you go, now you can crank it up!
 
 ##### Expected response
 >  **(Status code 200)**
-> ```json
+```json
 {
     "username": "Dummy",
     "email": "dummy@example.com",
@@ -110,14 +110,14 @@ and there you go, now you can crank it up!
 
 ##### Possible responses
 >  **(Status code 401)**
->```json
+```json
 {
     "message": "Wrong password."
 }
 ```
 
 > ** (Status code 500)**
->```json
+```json
 {
     "message": "Unable to sign a JWT",
     "error": {}
@@ -126,7 +126,7 @@ and there you go, now you can crank it up!
 
 ### POST - /auth/register
 ##### Expected body
->```json
+```json
 {
     "username": "Dummy",
     "email": "dummy@example.com",
@@ -136,7 +136,7 @@ and there you go, now you can crank it up!
 
 ##### Expected response
 > ** (Status code 200)**
->```json
+```json
 {
     "username": "Dummy",
     "token": "eyJhbGciOiJIU..."
@@ -145,7 +145,7 @@ and there you go, now you can crank it up!
 
 ##### Possible responses
 > ** (Status code 500)**
->```json
+```json
 {
     "message": "Unable to sign a JWT",
     "error": {}
